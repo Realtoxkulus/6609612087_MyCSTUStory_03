@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --h1-size : 24px;
+    --h3-size: 30px;
+    --h4-size: 16px;
+    --p-size: 18px;
+    --nav-link: 20px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+}
+
+section.about{
+    padding: 0px 150px;
+    margin-bottom: 50px;
+}
+
+.nav-bar{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 150px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a{
+    font-size: var(--nav-link);
+    color: #eab308;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover{
+    color: #fdf98b;
+}
+  
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fdf98b;
+    transform-origin: center;
+    transform: translate(-50%, 0) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    transform: translate(-50%, 0) scaleX(1);
+}
+
+.logo{
+    color: #fff;
+    font-size: var(--h1-size);
+}
+
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content img{
+    width: 500px;
+    height: auto;
+}
+
+.about-text h3{
+    font-size: var(--h3-size);
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-text h4{
+    font-weight: 500;
+    color: #eab308;
+    font-size: var(--h4-size);
+    margin-bottom: 20px;
+}
+
+.about-text p{
+    color: #fff;
+    font-size: var(--p-size);
+    margin-bottom: 20px;
+}
+
+.my-info{
+    display: flex;
+    gap: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+.head ul > li{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.caption ul > li{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button.btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #eab308;
+    box-shadow: 2px 6px 0px #eab308;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .5s ease;
+    margin-top: 10px;
+}
+
+button.btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #a3a3a3;
+    box-shadow: 2px 6px 0px #a3a3a3;
+}
+
+button.btn:active{
+    background-color: #eab308;
+    box-shadow: none;
+    border: none;
+    transform: translateY(4px);
+}
+
+button i{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.video{
+    padding: 50px 200px;
+}
+
+.video h2{
+    text-align: center;
+    color: #eab308;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.video> .underline{
+    height: 3px;
+    width: 80px;
+    background-color: #eab308;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.my-video{
+    display: flex;
+    justify-content: center;
+}
+
+video{
+    width: 903.2px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .about-content img{
+        width: 400px;
+    }
+
+    .nav-bar{
+        padding: 80px 100px 0px 100px;
+    }
+
+    section.about, .video{
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    :root{
+        --h3-size: 36px;
+        --h4-size: 16px;
+        --p-size: 16px;
+    }
+
+    .nav-bar{
+        padding: 80px 100px 0px 100px;
+    }
+
+    .about-content{
+        flex-direction: column;
+    }
+    section.about, .video{
+        padding: 50px 100px;
+        margin-bottom: 0;
+    }
+
+    .about-content img{
+        width: 100%;
+    }
+
+    li{
+        font-size: 20px;
+    }
+
+    video{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    :root{
+        --h1-size: 18px;
+    }
+
+    section.about, .video{
+        padding: 50px 100px;
+    }
+
+    .nav-bar{
+        padding: 80px 100px 0px 100px;
+    }
+
+    video{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    :root{
+        --h3-size: 30px;
+        --h4-size: 14px;
+        --p-size: 14px;
+        --h1-size: 16px;
+        --nav-link: 16px;
+    }
+
+    .nav-links{
+        gap: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 602px){
+    :root{
+        --h3-size: 30px;
+        --h4-size: 14px;
+        --p-size: 14px;
+        --h1-size: 16px;
+    }
+
+    .nav-bar{
+        padding: 50px 70px 0px 70px;
+    }
+
+    section.about, .video{
+        padding: 40px 70px;
+    }
+
+    .head{
+        flex: 1;
+    }
+
+    .caption{
+        flex: 1.5;
+    }
+
+    li{
+        font-size: 13px;
+    }
+
+    button{
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+}
+
+
+.myplan{
+    margin: 0 150px;
+    background-color: #1b2541;
+    padding: 50px;
+}
+
+.myplan h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #eab308;
+    font-size: 30px;
+}
+
+.myplan > .underline{
+    height: 3px;
+    width: 80px;
+    background-color: #eab308;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.myplan-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.myplan-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f3c65;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.myplan-card h4{
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(12, 27, 75, 0.5);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 30px;
+    border: 1px solid #81a6d9;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.card-icon i{
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #0f172a;
+    background-color: #81a6d9;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-icon i:hover{
+    color: #eab308;
+    background-color: #1b2541;
+    border: 1px solid #fff;
+}
+
+.myplan-card p{
+    color: #fff;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px){
+    .myplan{
+        margin: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .myplan-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .myplan{
+        margin: 50px 70px;
+    }
+
+    .myplan h2{
+        font-size: 25px;
+    }
+}
+
+.myfuture{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 150px;
+    gap: 30px;
+    justify-items: end;
+    align-items: center;
+    height: 70vh;
+}
+
+.myfuture-info h1{
+    color: #eab308;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.myfuture p{
+    color: #fff;
+    font-size: var(--p-size);
+}
+
+.myfuture-img{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.myfuture-img img{
+    width: 300px;
+}
+
+@media screen and (max-width: 1200px){
+    .myfuture{
+        margin: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .myfuture-img img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .myfuture{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 0;
+    }
+
+    .myfuture-info{
+        order: 2;
+    } 
+
+    .myfuture-img{
+        order: 1;
+    }
+
+    .myfuture-img img{
+        width: 250px;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .myfuture-img img{
+        width: 200px;
+    }
+    .myfuture-info h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .myfuture{
+        margin: 40px 70px;
+    }
+    .myfuture-img img{
+        width: 170px;
+    }
+}
